@@ -7,10 +7,11 @@ a   {
     color: inherit;
 }
 
-@keyframes slideDownfadeInpt2 {
-     0% {opacity: 0; top: 20px;}
 
-    100%  {opacity: 1; top: 50px;}
+@keyframes slideDownfadeInpt2 {
+     from {opacity: 0; top: 20px;}
+
+     to  {opacity: 1; top: 50px;}
 }
 
 @keyframes slideUpfadeInpt2  {
@@ -22,14 +23,32 @@ a   {
     from {opacity: 0;}
     to {opacity: 1;}
 }
-.part1 {
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes cutToBlack {
+    from{background-color: white;}
+    to{background-color: black;}
+}
+
+a:hover{animation: fadeOut 1s; animation-fill-mode:forwards;}
+a{animation: fadeIn 1s; animation-fill-mode:forwards;}
+
+.part1 {   
+    margin-left: 40px;
     .upper  {
+        a{ text-shadow: 2px 2px 8px #FFC42E;};
         color: #FFC42E;
         font-size: 50px;
         animation: fadeIn 4s, slideup 4s;
+        
     }
 
     .lower  {
+        a{ text-shadow: 2px 2px 8px #AB6f00;};
         opacity: 0;
         position: absolute;
         top: 50%;
@@ -46,13 +65,15 @@ a   {
 }
 
 .part2  {
-    a{ text-shadow: 2px 2px 8px white;}
+    a{ text-shadow: 2px 2px 8px white;};
     .upper{
         color: #FEFFEE;
         position: relative;
         top: 50px;
         left: 50px;
         animation: 3s fadeIn;
+        opacity: 0%;
+        animation-fill-mode: forwards;
 
     };
 
@@ -62,11 +83,10 @@ a   {
         right: 100px;
         text-align: right;
         color: #E4F3FF;
-        opacity: 0%;
         animation: 3s fadeIn;
         animation-delay: 1s;
         animation-fill-mode: forwards;
-        
+        opacity: 0%;
     }
     background-image: linear-gradient(#29184f 45%, #030039 55%);
     background-attachment: fixed;
@@ -94,10 +114,10 @@ a   {
 }
 
 .part4  {
-    a{ text-shadow: 2px 2px 8px #f879ee;}
+    a{ text-shadow: 2px 2px 8px #ff6bf8;}
     .line1 {opacity: 0%; animation: fadeIn 3s; animation-delay: 0s; animation-fill-mode: forwards;}
-    .line2 {opacity: 0%; animation: fadeIn 3s; animation-delay: 2s;animation-fill-mode: forwards;}
-    .line3 {opacity: 0%; animation: fadeIn 3s; animation-delay: 4s;animation-fill-mode: forwards;}
+    .line2 {opacity: 0%; animation: fadeIn 3s; animation-delay: 1s;animation-fill-mode: forwards;}
+    .line3 {opacity: 0%; animation: fadeIn 3s; animation-delay: 2s;animation-fill-mode: forwards;}
     h1  {
         color: #030039;
         position: relative;
@@ -109,11 +129,22 @@ a   {
 }
 
 .part5  {
+
+        .you {opacity: 0%; animation: fadeIn 0s; animation-delay: 0s; animation-fill-mode: forwards;};
+        .can {opacity: 0%; animation: fadeIn 0s; animation-delay: 1s; animation-fill-mode: forwards;}
+        .live {opacity: 0%; animation: fadeIn 0s; animation-delay: 2s; animation-fill-mode: forwards;}
+        .in {opacity: 0%; animation: fadeIn 0s; animation-delay: 3s; animation-fill-mode: forwards;}
+        .my {opacity: 0%; animation: fadeIn 0s; animation-delay: 4s; animation-fill-mode: forwards;}
+        .heart {opacity: 0%; animation: fadeIn 0s; animation-delay: 5s; animation-fill-mode: forwards;}
+
     h1  {
-        color: #030039;
+        color: #000000;
         position: relative;
         margin: 5%;
         text-align: center;
-        font-size: 45px
+        font-size: 45px;
     }
+    background-color: white;
+    background-size: cover;
+    animation: cutToBlack 0s; animation-delay: 6s; animation-fill-mode: forwards;
 }
