@@ -60,7 +60,7 @@ a{animation: fadeIn 1s; }
         animation-delay: 2s;
         animation-fill-mode: forwards;
     };
-    background-image: linear-gradient(#AB6f00 50%,#FFC42E 50%);
+    background-image: linear-gradient(#AB6f00 45%,#FFC42E 55%);
     background-attachment: fixed;
 }
 
