@@ -1,5 +1,5 @@
 body    {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Lato, sans-serif
 }
 
 a   {
@@ -34,8 +34,8 @@ a   {
     to{background-color: black;}
 }
 
-a:hover{animation: fadeOut 1s; animation-fill-mode:forwards;}
-a{animation: fadeIn 1s; animation-fill-mode:forwards;}
+a:hover{animation: fadeOut 0.5s; animation-fill-mode:forwards; animation-direction:alternate; animation-iteration-count: infinite;}
+a{animation: fadeIn 1s; }
 
 .part1 {   
     margin-left: 40px;
@@ -115,7 +115,7 @@ a{animation: fadeIn 1s; animation-fill-mode:forwards;}
 
 .part4  {
     a{ text-shadow: 2px 2px 8px #ff6bf8;}
-    .line1 {opacity: 0%; animation: fadeIn 3s; animation-delay: 0s; animation-fill-mode: forwards;}
+    .line1 {opacity: 0%; animation: fadeIn 3s; animation-delay: 0s; animation-fill-mode:forwards;}
     .line2 {opacity: 0%; animation: fadeIn 3s; animation-delay: 1s;animation-fill-mode: forwards;}
     .line3 {opacity: 0%; animation: fadeIn 3s; animation-delay: 2s;animation-fill-mode: forwards;}
     h1  {
@@ -147,4 +147,5 @@ a{animation: fadeIn 1s; animation-fill-mode:forwards;}
     background-color: white;
     background-size: cover;
     animation: cutToBlack 0s; animation-delay: 6s; animation-fill-mode: forwards;
-}
+    .restart {color:white;opacity:0%; animation: fadeIn 2s; animation-delay: 7s; animation-fill-mode: forwards;}
+    .restart:hover{animation: fadeOut 0.5s; animation-fill-mode:forwards; animation-direction:alternate; animation-iteration-count: infinite;}}
